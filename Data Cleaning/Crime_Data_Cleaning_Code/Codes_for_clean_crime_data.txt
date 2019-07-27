@@ -1,0 +1,134 @@
+# All the actions here are for testing whether the transformation is right.
+# Clean and Profile codes are labeled at each step.
+
+1. (Clean)The first line from the dataset is the name of each columns, not the real data
+
+scala> data.count
+res0: Long = 6500871  
+
+scala> val header = data.first()
+header: String = CMPLNT_NUM;CMPLNT_FR_DT;CMPLNT_FR_TM;CMPLNT_TO_DT;CMPLNT_TO_TM;ADDR_PCT_CD;RPT_DT;KY_CD;OFNS_DESC;PD_CD;PD_DESC;CRM_ATPT_CPTD_CD;LAW_CAT_CD;BORO_NM;LOC_OF_OCCUR_DESC;PREM_TYP_DESC;JURIS_DESC;JURISDICTION_CODE;PARKS_NM;HADEVELOPT;HOUSING_PSA;X_COORD_CD;Y_COORD_CD;SUSP_AGE_GROUP;SUSP_RACE;SUSP_SEX;TRANSIT_DISTRICT;Latitude;Longitude;Lat_Lon;PATROL_BORO;STATION_NAME;VIC_AGE_GROUP;VIC_RACE;VIC_SEX
+
+2. (Clean)get the pure data (drop the first line)
+
+scala> val realdata=data.filter(_!=header)
+realdata: org.apache.spark.rdd.RDD[String] = MapPartitionsRDD[2] at filter at <console>:31
+
+scala> realdata.count
+res2: Long = 6500870
+
+3. (Clean)split the lines by the delimiter(";")
+
+scala> val fields = realdata.map(_.split(";"))
+fields: org.apache.spark.rdd.RDD[Array[String]] = MapPartitionsRDD[14] at map at <console>:33
+
+scala> fields.first
+res11: Array[String] = Array(645180571, 02/24/2018, 18:45:00, "", "", 44, 02/24/2018, 109, GRAND LARCENY, 421, LARCENY,GRAND FROM VEHICLE/MOTORCYCLE, COMPLETED, FELONY, BRONX, FRONT OF, STREET, N.Y. POLICE DEPT, 0, "", "", "", 1,007,933, 241,724, "", "", "", "", 40.83012847600002, -73.91442277899995, (40.83012847600002, -73.91442277899995), PATROL BORO BRONX, "", 25-44, BLACK, F)
+
+4. (Clean)filter the lines that have null values for the needed fields 
+
+scala> val notempty = fields.filter(values=>values(1)!="" && values(2)!="" && values(27)!="" && values(28)!="")
+notempty: org.apache.spark.rdd.RDD[Array[String]] = MapPartitionsRDD[10] at filter at <console>:35
+
+scala> notempty.count
+res17: Long = 6482836      
+
+5. (Clean)select needed fields for this project
+
+scala> val selectedfileds = notempty.map(values=>(values(1),values(2),values(27).toDouble,values(28).toDouble))
+selectedfileds: org.apache.spark.rdd.RDD[(String, String, Double, Double)] = MapPartitionsRDD[11] at map at <console>:37
+
+scala> selectedfileds.first
+res18: (String, String, Double, Double) = (02/24/2018,18:45:00,40.83012847600002,-73.91442277899995)
+
+6. (Profile) get the type for each fields 
+
+scala> selectedfileds.getClass
+res32: Class[_ <: org.apache.spark.rdd.RDD[(String, String, Double, Double)]] = class org.apache.spark.rdd.MapPartitionsRDD
+
+7. (Profile) get the max and min values for each fields 
+
+scala> val profile =selectedfileds.map(tp=>(tp._1.length,tp._2.length,tp._3,tp._4))
+profile: org.apache.spark.rdd.RDD[(Int, Int, Double, Double)] = MapPartitionsRDD[12] at map at <console>:39                                              
+
+scala> profile.first
+res19: (Int, Int, Double, Double) = (10,8,40.83012847600002,-73.91442277899995)
+
+scala> val date = profile.map(_._1)
+date: org.apache.spark.rdd.RDD[Int] = MapPartitionsRDD[13] at map at <console>:41
+
+scala> date.max
+res20: Int = 10                                                                 
+
+scala> date.min
+res21: Int = 10      
+
+scala> val time = profile.map(_._2)
+time: org.apache.spark.rdd.RDD[Int] = MapPartitionsRDD[16] at map at <console>:41
+
+scala> time.max
+res26: Int = 8                                                                  
+
+scala> time.min
+res27: Int = 8    
+
+scala> val latitude = profile.map(_._3)
+latitude: org.apache.spark.rdd.RDD[Double] = MapPartitionsRDD[17] at map at <console>:41
+
+scala> latitude.max
+res28: Double = 59.657273946                                                    
+
+scala> latitude.min
+res29: Double = 40.112709974  
+
+scala> val longitude = profile.map(_._4)
+longitude: org.apache.spark.rdd.RDD[Double] = MapPartitionsRDD[18] at map at <console>:41
+
+scala> longitude.max
+res30: Double = -73.684788384                                                   
+
+scala> longitude.min
+res31: Double = -77.519206334 
+
+
+8. (Profile) From the result, we can see that the max length and min length for date and time fields are the same, so only profile the string length of date and time seems useless. We can profile year of date and profile hour of time.
+
+scala> val year = selectedfileds.map(_._1.split("/")(2))
+year: org.apache.spark.rdd.RDD[String] = MapPartitionsRDD[20] at map at <console>:39
+
+scala> year.max
+res34: String = 2018                                                            
+
+scala> year.min
+res35: String = 1015  
+
+scala> val hour = selectedfileds.map(_._2.split(":")(0))
+hour: org.apache.spark.rdd.RDD[String] = MapPartitionsRDD[22] at map at <console>:39
+
+scala> hour.max
+res37: String = 23                                                              
+
+scala> hour.min
+res38: String = 00     
+
+9. (Clean) For our project, we only need the data for year 2018, so we should filter our data
+
+scala> val cleaneddata=selectedfileds.filter(_._1.contains("2018")) 
+cleaneddata: org.apache.spark.rdd.RDD[(String, String, Double, Double)] = MapPartitionsRDD[23] at filter at <console>:39
+
+scala> cleaneddata.count
+res39: Long = 452958                                                            
+
+scala> cleaneddata.first
+res40: (String, String, Double, Double) = (02/24/2018,18:45:00,40.83012847600002,-73.91442277899995)
+
+scala> cleaneddata.saveAsTextFile("spark-project/cleaneddata")
+
+                                           
+
+
+
+
+
+
+

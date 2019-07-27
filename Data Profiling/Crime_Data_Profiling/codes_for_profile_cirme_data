@@ -1,0 +1,69 @@
+6. (Profile) get the type for each fields 
+
+scala> selectedfileds.getClass
+res32: Class[_ <: org.apache.spark.rdd.RDD[(String, String, Double, Double)]] = class org.apache.spark.rdd.MapPartitionsRDD
+
+7. (Profile) get the max and min values for each fields 
+
+scala> val profile =selectedfileds.map(tp=>(tp._1.length,tp._2.length,tp._3,tp._4))
+profile: org.apache.spark.rdd.RDD[(Int, Int, Double, Double)] = MapPartitionsRDD[12] at map at <console>:39                                              
+
+scala> profile.first
+res19: (Int, Int, Double, Double) = (10,8,40.83012847600002,-73.91442277899995)
+
+scala> val date = profile.map(_._1)
+date: org.apache.spark.rdd.RDD[Int] = MapPartitionsRDD[13] at map at <console>:41
+
+scala> date.max
+res20: Int = 10                                                                 
+
+scala> date.min
+res21: Int = 10      
+
+scala> val time = profile.map(_._2)
+time: org.apache.spark.rdd.RDD[Int] = MapPartitionsRDD[16] at map at <console>:41
+
+scala> time.max
+res26: Int = 8                                                                  
+
+scala> time.min
+res27: Int = 8    
+
+scala> val latitude = profile.map(_._3)
+latitude: org.apache.spark.rdd.RDD[Double] = MapPartitionsRDD[17] at map at <console>:41
+
+scala> latitude.max
+res28: Double = 59.657273946                                                    
+
+scala> latitude.min
+res29: Double = 40.112709974  
+
+scala> val longitude = profile.map(_._4)
+longitude: org.apache.spark.rdd.RDD[Double] = MapPartitionsRDD[18] at map at <console>:41
+
+scala> longitude.max
+res30: Double = -73.684788384                                                   
+
+scala> longitude.min
+res31: Double = -77.519206334 
+
+
+8. (Profile) From the result, we can see that the max length and min length for date and time fields are the same, so only profile the string length of date and time seems useless. We can profile year of date and profile hour of time.
+
+scala> val year = selectedfileds.map(_._1.split("/")(2))
+year: org.apache.spark.rdd.RDD[String] = MapPartitionsRDD[20] at map at <console>:39
+
+scala> year.max
+res34: String = 2018                                                            
+
+scala> year.min
+res35: String = 1015  
+
+scala> val hour = selectedfileds.map(_._2.split(":")(0))
+hour: org.apache.spark.rdd.RDD[String] = MapPartitionsRDD[22] at map at <console>:39
+
+scala> hour.max
+res37: String = 23                                                              
+
+scala> hour.min
+res38: String = 00     
