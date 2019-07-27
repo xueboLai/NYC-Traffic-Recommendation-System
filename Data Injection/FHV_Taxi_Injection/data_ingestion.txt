@@ -1,0 +1,28 @@
+Data Ingestion:
+1, Download For-Hired-Vehicle from https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+2, 
+//scp the data from local machine to nyu dumbo
+scp -r fhv xl1638@dumbo.es.its.nyu.edu:./
+3, 
+//log into nyu dumbo
+ssh -Y xl1638@dumbo.es.its.nyu.edu
+4, 
+//make a directory in hdfs to hold files
+hdfs dfs -mkdir /user/xl1638/spark_final_project
+5, 
+//copy data from dumbo to hdfs
+hdfs dfs -put fhv /user/xl1638/spark_final_project\
+6, 
+//check whether the data are there
+hdfs dfs -ls /user/xl1638/spark_final_project/fhv
+Result:
+-rw-r--r--+  3 xl1638 users 1402245164 2019-07-22 07:40 /user/xl1638/spark_final_project/fhv/fhv_tripdata_2018-01.csv
+-rw-r--r--+  3 xl1638 users 1370343495 2019-07-22 07:40 /user/xl1638/spark_final_project/fhv/fhv_tripdata_2018-02.csv
+-rw-r--r--+  3 xl1638 users 1557837977 2019-07-22 07:40 /user/xl1638/spark_final_project/fhv/fhv_tripdata_2018-03.csv
+-rw-r--r--+  3 xl1638 users 1494126058 2019-07-22 07:40 /user/xl1638/spark_final_project/fhv/fhv_tripdata_2018-04.csv
+-rw-r--r--+  3 xl1638 users 1529840004 2019-07-22 07:40 /user/xl1638/spark_final_project/fhv/fhv_tripdata_2018-05.csv
+-rw-r--r--+  3 xl1638 users 1499544292 2019-07-22 07:40 /user/xl1638/spark_final_project/fhv/fhv_tripdata_2018-06.csv
+-rw-r--r--+  3 xl1638 users 1534168283 2019-07-22 07:41 /user/xl1638/spark_final_project/fhv/fhv_tripdata_2018-07.csv
+-rw-r--r--+  3 xl1638 users 1571169260 2019-07-22 07:41 /user/xl1638/spark_final_project/fhv/fhv_tripdata_2018-08.csv
+-rw-r--r--+  3 xl1638 users 1625120711 2019-07-22 07:41 /user/xl1638/spark_final_project/fhv/fhv_tripdata_2018-11.csv
+-rw-r--r--+  3 xl1638 users 1694806758 2019-07-22 07:41 /user/xl1638/spark_final_project/fhv/fhv_tripdata_2018-12.csv

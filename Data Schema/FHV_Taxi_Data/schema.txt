@@ -1,0 +1,112 @@
+Data Schema explanation for For-Hired Vehicle (FHV) data.
+
+Data ranges and types can be found in my profile_data.scala
+Data length is fixed for each of the entries.
+
+Column Name:
+startDate
+Description:
+This is the start date for an FHV trip record. It is in the format of “YYYY-mm-dd”. For example, Sep.1 2018 would be 2018-09-01. That means a FHV trip record is started at Sep.1 2018.
+Data Type:
+The data type is string. The reason why I use string is because it is much easy to compare string value and extract the useful information from string. That’s why I did not convert it to Date format.
+
+
+
+Column Name:
+startTime
+Description:
+This is the start time for an FHV trip record. It is a supplement of the startDate. It is in the format “HH-MM-ss”. For example, precisely half past ten o’clock at night would be 22:30:00. That means a FHV trip record is started at precisely half past ten o’clock.
+Data Type:
+The data type is string. The reason why I use string is because it is much easy to compare string value and extract the useful information from string. That’s why I did not convert it to Date format.
+
+
+
+Column Name:
+endDate
+Description:
+This is the ending date for an FHV trip record. It is in the format of “YYYY-mm-dd”. For example, Sep.1 2018 would be 2018-09-01. That means a FHV trip record is ended at Sep.1 2018.
+Data Type:
+The data type is string. The reason why I use string is because it is much easy to compare string value and extract the useful information from string. That’s why I did not convert it to Date format.
+
+
+
+Column Name:
+endTime
+Description:
+This is the ending time for an FHV trip record. It is a supplement of the endDate. It is in the format “HH-MM-ss”. For example, precisely half past ten o’clock at night would be 22:30:00. That means a FHV trip record is ended at precisely half past ten o’clock.
+Data Type:
+The data type is string. The reason why I use string is because it is much easy to compare string value and extract the useful information from string. That’s why I did not convert it to Date format.
+
+
+
+Column Name:
+startLoc:
+Description:
+This is the starting location of the FHV trip data. The number in this field represents/maps to a TCL taxi zone. For example “16” means the FHV trip record starts at zone 16.
+Data Type:
+The data type is string. The reason why I use string is because there is no significance in terms of largeness of number in this case. They are all just mapping to a zone which specified by a shape file. Using Int/Log as the data type for this column would cause confusion.
+
+
+Column Name:
+endLoc:
+Description:
+This is the ending location of the FHV trip data. The number in this field represents/maps to a TCL taxi zone. For example “16” means the FHV trip record ends at zone 16.
+Data Type:
+The data type is string. The reason why I use string is because there is no significance in terms of largeness of number in this case. They are all just mapping to a zone which specified by a shape file. Using Int/Log as the data type for this column would cause confusion.
+
+
+
+Range: 
+For startDAte and endDate:
+/*
++-------------+                                                                 
+|min|
++-------------+
+|2018-01-01   |
++-------------+
+*/
+
+df.agg(max(selectedColumnName)).show
+/*
++-------------+                                                                 
+|min|
++-------------+
+|2018-12-31   |
++-------------+
+*/
+
+For startTime and endTime:
+/*
++-------------+                                                                 
+|min|
++-------------+
+|00:00:00      |
++-------------+
+*/
+
+df.agg(max(selectedColumnName)).show
+/*
++-------------+                                                                 
+|min|
++-------------+
+|23:59:59      |
++-------------+
+*/
+
+For startLoc and endLoc:
+/*
++-------------+                                                                 
+|min   |
++-------------+
+|0             |
++-------------+
+*/
+
+df.agg(max(selectedColumnName)).show
+/*
++-------------+                                                                 
+|min   |
++-------------+
+|99            |
++-------------+
+*/
