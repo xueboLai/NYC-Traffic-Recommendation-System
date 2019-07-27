@@ -67,20 +67,20 @@ df.show()
 val selectedColumnName = df.columns(0)
 df.agg(min(selectedColumnName)).show
 /*
-+-------------+                                                                 
++--------------+                                                                 
 |min(startDate)|
-+-------------+
-|2018-01-01   |
-+-------------+
++--------------+
+|2018-01-01    |
++--------------+
 */
 
 df.agg(max(selectedColumnName)).show
 /*
-+-------------+                                                                 
-|min(startDate)|
-+-------------+
-|2018-12-31   |
-+-------------+
++--------------+                                                                 
+|max(startDate)|
++--------------+
+|2018-12-31    |
++--------------+
 */
 
 val selectedColumnName = df.columns(2)
@@ -96,7 +96,7 @@ df.agg(min(selectedColumnName)).show
 df.agg(max(selectedColumnName)).show
 /*
 +-------------+                                                                 
-|min(endDate) |
+|max(endDate) |
 +-------------+
 |2018-12-31   |
 +-------------+
@@ -105,56 +105,56 @@ df.agg(max(selectedColumnName)).show
 val selectedColumnName = df.columns(1)
 df.agg(min(selectedColumnName)).show
 /*
-+-------------+                                                                 
++--------------+                                                                 
 |min(startTime)|
-+-------------+
++--------------+
 |00:00:00      |
-+-------------+
++--------------+
 */
 
 df.agg(max(selectedColumnName)).show
 /*
-+-------------+                                                                 
-|min(startTime)|
-+-------------+
++--------------+                                                                 
+|max(startTime)|
++--------------+
 |23:59:59      |
-+-------------+
++--------------+
 */
 
 val selectedColumnName = df.columns(3)
 df.agg(min(selectedColumnName)).show
 /*
-+-------------+                                                                 
++--------------+                                                                 
 |min(endTime)  |
-+-------------+
++--------------+
 |00:00:00      |
-+-------------+
++--------------+
 */
 
 df.agg(max(selectedColumnName)).show
 /*
-+-------------+                                                                 
-|min(endTime)  |
-+-------------+
++--------------+                                                                 
+|max(endTime)  |
++--------------+
 |23:59:59      |
-+-------------+
++--------------+
 */
 val selectedColumnName = df.columns(4)
 df.agg(min(selectedColumnName)).show
 /*
-+-------------+                                                                 
++--------------+                                                                 
 |min(startLoc) |
-+-------------+
-|0             |
-+-------------+
++--------------+
+|1             |
++--------------+
 */
 
 df.agg(max(selectedColumnName)).show
 /*
 +-------------+                                                                 
-|min(startLoc) |
+|max(startLoc)|
 +-------------+
-|99            |
+|265          |
 +-------------+
 */
 
@@ -162,18 +162,18 @@ val selectedColumnName = df.columns(5)
 df.agg(min(selectedColumnName)).show
 /*
 +-------------+                                                                 
-|min(endLoc)   |
+|min(endLoc)  |
 +-------------+
-|0             |
+|1            |
 +-------------+
 */
 
 df.agg(max(selectedColumnName)).show
 /*
 +-------------+                                                                 
-|min(endLoc)   |
+|max(endLoc)  |
 +-------------+
-|99            |
+|265          |
 +-------------+
 */
 
