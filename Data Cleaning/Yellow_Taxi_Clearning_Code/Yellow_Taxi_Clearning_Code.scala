@@ -30,6 +30,10 @@ import org.joda.time.Interval
 import org.joda.time.Duration
 
 def calculateTime = udf((startDate:String, startTime: String,endDate:String,endTime:String) => {
+
+  if((startDate.trim()+startTime.trim()).compareTo((endDate.trim()+endTime.trim()))<0){
+  	0
+  }else{
   val startDateArr:Array[String] = startDate.trim().split("-");
   val startYear:Int = startDateArr(0).toInt;
   val startMonth:Int = startDateArr(1).toInt;
@@ -57,14 +61,13 @@ def calculateTime = udf((startDate:String, startTime: String,endDate:String,endT
   val duration_in_sec =  duration.getStandardSeconds();
   
   duration_in_sec;
+  }
 } )
 
 val df_2 = df_1.withColumn("tripDuration",calculateTime(df("startDate"),df("startTime"),df("endDate"),df("endTime")))
 
 
 
-//transform time
-val transform = udf[String, String](maptime(_))
 //time mapping
 def maptime (s:String):String={
 val s_1 = s.substring(0,2);
@@ -74,7 +77,22 @@ else if (s_1.toInt>=17 && s_1.toInt<=20) 3.toString
 else  4.toString
 }
 
+//transform time
+val transform = udf[String, String](maptime(_))
+
 val df_3 = df_2.withColumn("startTime_c",transform(df("startTime"))).drop("startTime").withColumnRenamed("startTime_c","startTime")
 val df_4 = df_3.withColumn("endTime_c",transform(df("endTime"))).drop("endTime").withColumnRenamed("endTime_c","endTime");
+
+val df_5 = df_4.filter("not (tripDuration = 0)")
+
+//drop all the row that contains at least one null/empty entry
+val df_clean = df_5.na.drop()
+//convert the data back to rdd
+val rows = df.rdd
+//output the data to hdfs
+rows.saveAsTextFile("/user/xl1638/spark_final_proj/yellow_taxi_clean")
+
+
+
 
 
