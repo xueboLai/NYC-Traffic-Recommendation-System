@@ -1,0 +1,10 @@
+(column names, description(max,min), and their data types) 
+
+Column names         Max             Min        Type
+Date                 10	             10	        String		
+Time	              8	              8	        String		
+Latitude	59.657273946	40.112709974	Double      
+Longitude	-73.684788384	-77.519206334	Double
+
+The max and min length for date and time are the same, but the year of date is 2018 and the hour of time is from 0 to 23.
+

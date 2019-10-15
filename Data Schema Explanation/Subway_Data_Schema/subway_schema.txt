@@ -1,0 +1,5 @@
+	field name         desc            type        max_digits      min_digits     max_length      min_length     length of the column
+	NAME             station name      String         ---             ---            34              5                  473
+	Latitude       latitude value      Double         14              12             ---             ---                473
+	Longitude      longitude value     Double         11              15             ---             ---                473
+ 	LINE           lines that pass     String         ---             ---            15              1                  473

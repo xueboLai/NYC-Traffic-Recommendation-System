@@ -1,0 +1,156 @@
+Data Schema explanation for For-Hired Vehicle (FHV) data.
+
+Data ranges and types can be also found in my profile_data.scala
+
+
+1,
+Column Name:
+startDate
+Description:
+This is the start date for an FHV trip record. It is in the format of “YYYY-mm-dd”. For example, Sep.1 2018 would be 2018-09-01. That means a FHV trip record is started at Sep.1 2018.
+Data Type:
+The data type is string. The reason why I use string is because it is much easy to compare string value and extract the useful information from string. That’s why I did not convert it to Date format.
+Range of values: 
+/*
++--------------+                                                                 
+|min(startDate)|
++--------------+
+|2018-01-01    |
++--------------+
+*/
+/*
++--------------+                                                                 
+|max(startDate)|
++--------------+
+|2018-12-31    |
++--------------+
+*/
+maximum string size for startDate: 10 (fixed size)
+
+
+2,
+Column Name:
+startTime
+Description:
+This is the start time for an FHV trip record. It is a supplement of the startDate. It is in the format “HH-MM-ss”. For example, precisely half past ten o’clock at night would be 22:30:00. That means a FHV trip record is started at precisely half past ten o’clock.
+Data Type:
+The data type is string. The reason why I use string is because it is much easy to compare string value and extract the useful information from string. That’s why I did not convert it to Date format.
+Range of values: 
+/*
++--------------+                                                                 
+|min(startTime)|
++--------------+
+|00:00:00      |
++--------------+
+*/
+/*
++--------------+                                                                 
+|max(startTime)|
++--------------+
+|23:59:59      |
++--------------+
+*/
+maximum string size for startTime: 8 (fixed size)
+
+
+3,
+Column Name:
+endDate
+Description:
+This is the ending date for an FHV trip record. It is in the format of “YYYY-mm-dd”. For example, Sep.1 2018 would be 2018-09-01. That means a FHV trip record is ended at Sep.1 2018.
+Data Type:
+The data type is string. The reason why I use string is because it is much easy to compare string value and extract the useful information from string. That’s why I did not convert it to Date format.
+Range of values: 
+/*
++------------+                                                                 
+|min(endDate)|
++------------+
+|2018-01-01  |
++------------+
+*/
+/*
++------------+                                                                 
+|max(endDate)|
++------------+
+|2018-12-31  |
++------------+
+*/
+maximum string size for startDate: 10 (fixed size)
+
+
+4,
+Column Name:
+endTime
+Description:
+This is the ending time for an FHV trip record. It is a supplement of the endDate. It is in the format “HH-MM-ss”. For example, precisely half past ten o’clock at night would be 22:30:00. That means a FHV trip record is ended at precisely half past ten o’clock.
+Data Type:
+The data type is string. The reason why I use string is because it is much easy to compare string value and extract the useful information from string. That’s why I did not convert it to Date format.
+Range of values: 
+/*
++------------+                                                                 
+|min(endTime)|
++------------+
+|00:00:00    |
++------------+
+*/
+/*
++------------+                                                                 
+|max(endTime)|
++------------+
+|23:59:59    |
++------------+
+*/
+maximum string size for startTime: 8 (fixed size)
+
+
+
+
+5,
+Column Name:
+startLoc:
+Description:
+This is the starting location of the FHV trip data. The number in this field represents/maps to a TCL taxi zone. For example “16” means the FHV trip record starts at zone 16.
+Data Type:
+The data type is string. The reason why I use string is because there is no significance in terms of largeness of number in this case. They are all just mapping to a zone which specified by a shape file. Using Int/Log as the data type for this column would cause confusion.
+Range of values: 
+/*
++-------------+                                                                 
+|min(startLoc)|
++-------------+
+|1            |
++-------------+
+*/
+/*
++-------------+                                                                 
+|max(startLoc)|
++-------------+
+|265          |
++-------------+
+*/
+maximum string size for startTime: 1-3 digits' character(s) (the mapping is from 1 to 265)
+
+
+6,
+Column Name:
+endLoc:
+Description:
+This is the ending location of the FHV trip data. The number in this field represents/maps to a TCL taxi zone. For example “16” means the FHV trip record ends at zone 16.
+Data Type:
+The data type is string. The reason why I use string is because there is no significance in terms of largeness of number in this case. They are all just mapping to a zone which specified by a shape file. Using Int/Log as the data type for this column would cause confusion.
+Range of values: 
+/*
++-----------+                                                                 
+|min(endLoc)|
++-----------+
+|1          |
++-----------+
+*/
+/*
++-----------+                                                                 
+|max(endLoc)|
++-----------+
+|265        |
++-----------+
+*/
+maximum string size for startTime: 1-3 digits' character(s) (the mapping is from 1 to 265)
+
