@@ -1,0 +1,12 @@
+1. Download subway datasets from website.
+
+2. Load the file from local file system to Dumbo:
+
+scp subway.csv zh1272@dumbo.es.its.nyu.edu:/home/zh1272
+
+
+3. Load the file to HDFS:
+
+hdfs dfs -mkdir Spark_project
+hdfs dfs -mkdir Spark_projct/dataset
+hdfs dfs -put subway.csv Spark_project/dataset

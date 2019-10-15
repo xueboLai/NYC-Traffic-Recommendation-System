@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to the Map System</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link href="Content/Styles/styles.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+    <div class="container">
+    <!-- This is for the navigation bar -->
+    	<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="Home.html">
+    <img src="pictures/nyu" width="28" height="30" class="d-inline-block align-top" >&nbsp
+    NYU Mapping
+  </a>
+  </nav>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="Home.html">Main Page</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br><br>
+    <h4 class="text-center">Recommended Route</h4>
+<br>
+
+<!-- Content area -->
+<div class="row col-sm-12 offset-md-1 col-md-9">
+
+    {% if taxi %}
+    <p>
+    <h5>Taxi Option:</h5>
+    <br>
+    <h5>{{ taxi }}</h5>
+    <h5>The cost estimate function is coming, please stay tuned with us!</h5>
+    </p>
+    {% endif %}
+
+    <br><br>
+    {% if sub %}
+    <p>
+    <h5>Public Transportation Option:</h5>
+    <br>
+    <h5>{{ sub }}</h5>
+    <h5>The cost estimate function is coming, please stay tuned with us!</h5>
+    </p>
+    {% endif %}
+
+
+</div>
+
+
+
+<br><br><br>
+<blockquote class="blockquote col-md-offset-3 col-md-12">
+  <p class="mb-0">Anytime I feel lost, I pull out a map and stare. I stare until I have reminded myself that life is a giant adventure, so much to do, to see.</p>
+  <footer class="blockquote-footer">Angelina Jolie<cite title="Source Title">&nbsp(American actress)</cite></footer>
+</blockquote>
+
+
+	<div class="row" style = "margin: 5%;">
+	</div>
+	<!-- This is for the footer -->
+    <footer class="footer col-sm-12" style = "background-color:lightgrey">
+      <div class="container">
+        <span class="text-muted" style = "text-align:center; display:table; margin:0px auto;">The Best NYC Mapping System</span>
+      </div>
+    </footer>
+
+
+</div>
+
+
+</body>
+</html>

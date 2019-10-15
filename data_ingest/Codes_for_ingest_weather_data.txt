@@ -1,0 +1,23 @@
+1. copy the dataset to dumbo
+
+scp /Users/yangchen/Downloads/weather_data.csv cy1285@dumbo.es.its.nyu.edu:/home/cy1285/  
+
+2. copy the dataset to HDFS
+
+hdfs dfs mkdir spark-project
+hdfs dfs -put weather_data.csv spark-project
+
+3. create an RDD from the file
+
+val data = sc.textFile("spark-project/weather_data.csv")
+
+4. verify that the RDD has been created, the data from the dataset is good
+
+data.count
+res0: Long = 12406   
+
+data.take(3).foreach(println)
+"STATION","DATE","REPORT_TYPE","SOURCE","AWND","BackupDirection","BackupDistance","BackupDistanceUnit","BackupElements","BackupElevation","BackupElevationUnit","BackupEquipment","BackupLatitude","BackupLongitude","BackupName","CDSD","CLDD","DSNW","DailyAverageDewPointTemperature","DailyAverageDryBulbTemperature","DailyAverageRelativeHumidity","DailyAverageSeaLevelPressure","DailyAverageStationPressure","DailyAverageWetBulbTemperature","DailyAverageWindSpeed","DailyCoolingDegreeDays","DailyDepartureFromNormalAverageTemperature","DailyHeatingDegreeDays","DailyMaximumDryBulbTemperature","DailyMinimumDryBulbTemperature","DailyPeakWindDirection","DailyPeakWindSpeed","DailyPrecipitation","DailySnowDepth","DailySnowfall","DailySustainedWindDirection","DailySustainedWindSpeed","DailyWeather","HDSD","HTDD","HeavyFog","HourlyAltimeterSetting","HourlyDewPointTemperature","HourlyDryBulbTemperature","HourlyPrecipitation","HourlyPresentWeatherType","HourlyPressureChange","HourlyPressureTendency","HourlyRelativeHumidity","HourlySeaLevelPressure","HourlySkyConditions","HourlyStationPressure","HourlyVisibility","HourlyWetBulbTemperature","HourlyWindDirection","HourlyWindGustSpeed","HourlyWindSpeed","MonthlyAverageRH","MonthlyDaysWithGT001Precip","MonthlyDaysWithGT010Precip","MonthlyDaysWithGT32Temp","MonthlyDaysWithGT90Temp","MonthlyDaysWithLT0Temp","MonthlyDaysWithLT32Temp","MonthlyDepartureFromNormalAverageTemperature","MonthlyDepartureFromNormalCoolingDegreeDays","MonthlyDepartureFromNormalHeatingDegreeDays","MonthlyDepartureFromNormalMaximumTemperature","MonthlyDepartureFromNormalMinimumTemperature","MonthlyDepartureFromNormalPrecipitation","MonthlyDewpointTemperature","MonthlyGreatestPrecip","MonthlyGreatestPrecipDate","MonthlyGreatestSnowDepth","MonthlyGreatestSnowDepthDate","MonthlyGreatestSnowfall","MonthlyGreatestSnowfallDate","MonthlyMaxSeaLevelPressureValue","MonthlyMaxSeaLevelPressureValueDate","MonthlyMaxSeaLevelPressureValueTime","MonthlyMaximumTemperature","MonthlyMeanTemperature","MonthlyMinSeaLevelPressureValue","MonthlyMinSeaLevelPressureValueDate","MonthlyMinSeaLevelPressureValueTime","MonthlyMinimumTemperature","MonthlySeaLevelPressure","MonthlyStationPressure","MonthlyTotalLiquidPrecipitation","MonthlyTotalSnowfall","MonthlyWetBulb","NormalsCoolingDegreeDay","NormalsHeatingDegreeDay","REM","REPORT_TYPE","SOURCE","ShortDurationEndDate005","ShortDurationEndDate010","ShortDurationEndDate015","ShortDurationEndDate020","ShortDurationEndDate030","ShortDurationEndDate045","ShortDurationEndDate060","ShortDurationEndDate080","ShortDurationEndDate100","ShortDurationEndDate120","ShortDurationEndDate150","ShortDurationEndDate180","ShortDurationPrecipitationValue005","ShortDurationPrecipitationValue010","ShortDurationPrecipitationValue015","ShortDurationPrecipitationValue020","ShortDurationPrecipitationValue030","ShortDurationPrecipitationValue045","ShortDurationPrecipitationValue060","ShortDurationPrecipitationValue080","ShortDurationPrecipitationValue100","ShortDurationPrecipitationValue120","ShortDurationPrecipitationValue150","ShortDurationPrecipitationValue180","Sunrise","Sunset","TStorms","WindEquipmentChangeDate"
+"72505394728","2018-01-01T00:51:00","FM-15","7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"30.33","-4","9","0.00",,"+0.01","5","55","30.31","CLR:00","30.16","10.00","7","300","21","9",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"MET11501/01/18 00:51:02 METAR KNYC 010551Z 30008G18KT 10SM CLR M13/M20 A3033 RMK AO2 SLP264 T11281200 11111 21128 55003 $","FM-15","7",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"72505394728","2018-01-01T01:51:00","FM-15","7",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"30.34","-4","9","0.00",,,,"55","30.32","CLR:00","30.17","10.00","7","290","18","10",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"MET09701/01/18 01:51:02 METAR KNYC 010651Z 29009G16KT 10SM CLR M13/M20 A3034 RMK AO2 SLP267 T11281200 $","FM-15","7",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+

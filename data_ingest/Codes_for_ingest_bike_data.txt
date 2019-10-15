@@ -1,0 +1,10 @@
+1. Download bike datasets from website.
+
+2. Load the file from local file system to Dumbo:
+
+scp bikedata/* zh1272@dumbo.es.its.nyu.edu:/home/zh1272/spark_dataset/citibike
+
+
+3. Load the file to HDFS:
+hdfs dfs -mkdir Spark_project/citibike
+hdfs dfs -put spark_dataset/citibike/* Spark_project/citibike
