@@ -1,7 +1,0 @@
-field                          desc                    type               max              min       max length    min length     length of the column
-
-DATE                         datetime                String               ---              ---           21           21             12450
-DailySnowfall            daily snowfall volume       Double                9.8              0.0          ---         ---             12390
-HourlyDryBulbTemperature     temperature             Int                   95                5           ---         ---             12026
-HourlyPrecipitation     hourly rainfall volume       Double               1.69              0.0          ---         ---              9499    
-HourlyWindSpeed           hourly windspeed           Int                   21                0           ---         ---              8707
