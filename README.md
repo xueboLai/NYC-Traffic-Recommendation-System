@@ -1,7 +1,6 @@
 <h1 align=center> NYC-Traffic-Recommendation-System</h1>
-
-<h2 align = "center">Overview</h2>
 <p>Keywords: Spark, Python, Data Analysis and Visualization, Tableau, Full-Stack Application</p>
+<h2 align = "center">Overview</h2>
 <p>
 
 The aim of this project is to develop a NYC multimodal transportation recommendation system based on exploring the travelling pattern of citizens taking various public transportation tools in NYC. At the stage of exploring user group’s preference and travelling patterns, multiple datasets such as taxi data, bike data, subway data and weather data are collected. 
@@ -134,10 +133,12 @@ The graph above shows the usage of taxi data across 2018. Taxi data is split bas
 </details>
 
 
+<br>
+<br>
+<br>
+(To be continued)
 
-
-
-For more detailed description of the project, please kindly read our paper [NYC_Traffic_Model.pdf](/NYC_Traffic_Model.pdf) which contains all of our findings, project demonstrations, result visualization and details explanation.
+We are currently in progress of writing the demo and project explanation in README.md. Because this project is very lengthy, it would take us some time to rewrite our findings from paper to Github. For all our findings, please kindly read our paper [NYC_Traffic_Model.pdf](/NYC_Traffic_Model.pdf) which contains all the information about project demonstrations, result visualization and details explanation for now. We really appreciate your patience. 
 
 
 
