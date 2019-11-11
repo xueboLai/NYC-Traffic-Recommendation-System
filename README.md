@@ -6,6 +6,12 @@ The aim of this project is to develop a NYC multimodal transportation recommenda
  
  During the analytics, Spark and Scala are used to fully understand these data and to find useful insights important for building the recommendation model. For the model, a multi-objective optimization model considering the time and weather is built. In this project, the multi-objective model is transferred into single objective optimization problem using weighted sum method. Floyd-Warshall algorithm is utilized to find the optimal path. Finally, based on the model we built a recommendation system. On the front-end web application built by Python Flask, users can choose the origin and destination location and the website would provide the “best route” (lowest cost route) consisted of different transportation modes to the user.  
 </p>
+
+<p>The Project Design Diagram is shown below, </p>
+![design diagram](./graphs/design.png)
+
+
+
 <details><summary><b>Please click on the dropdown to see the detailed Application Design</b></strong></summary>
 <p>
 	At the first stage of the project, data including taxi, subway, citibike and weather from different sources is collected and stored in Hadoop HDFS. In Spark, the travelling patterns of taxi, subway and citibikes are analyzed under different weather conditions and time periods. Average velocity and cost of each transportation mode under different weather conditions and time period are generated. With the result of analysis, a multimodal transportation recommendation model minimizing both duration and cost is built and Floyd-Warshall algorithm is utilized to find the optimal path.
@@ -18,7 +24,12 @@ With the data layer constructed as described above, we have the options to build
 </p>
 
 </details>
-The Project Design Diagram is shown below,
+
+
+
+
+
+
 
 
 <details><summary><b>Please click on the dropdown to see the detailed data description</b></strong></summary>
