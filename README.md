@@ -14,10 +14,6 @@ The aim of this project is to develop a NYC multimodal transportation recommenda
 <p align="center">
 	<image src="./graphs/design.png">
 </p>
-
-
-<h2 align = "center">Data Analysis</h2>
-
 <details><summary><b>Please click on the dropdown to see the detailed Application Design</b></strong></summary>
 <p>
 	At the first stage of the project, data including taxi, subway, citibike and weather from different sources is collected and stored in Hadoop HDFS. In Spark, the travelling patterns of taxi, subway and citibikes are analyzed under different weather conditions and time periods. Average velocity and cost of each transportation mode under different weather conditions and time period are generated. With the result of analysis, a multimodal transportation recommendation model minimizing both duration and cost is built and Floyd-Warshall algorithm is utilized to find the optimal path.
@@ -33,12 +29,16 @@ With the data layer constructed as described above, we have the options to build
 
 
 
+<h2 align = "center">Data Analysis</h2>
 
 
 
 
 
-<details><summary><b>Please click on the dropdown to see the detailed data description</b></strong></summary>
+
+
+
+<details><summary><b>Please click on the dropdown to see the raw data description</b></strong></summary>
  <h2 align = "center">Detailed Data Description</h2>
 <p>
 As discussed above, we mainly made use of four different kinds of data: Taxi Data, Subway Data, Bike Data, and Weather Data. 
@@ -111,14 +111,26 @@ Weather data (4.8MB) was downloaded from National Centers For Environmental Info
 	<br>
 	<span>Drop-off Heatmap</span>
 </p>
-<details><summary><b>Description for pick-up and drop-off</b></strong></summary>
+<details><summary><b>Description for pick-up and drop-off graphs</b></strong></summary>
 <p>
-In Figure 6.2.1 pickup heatmap, the more counts an area have, the darker red that area is. As the graph indicates, Manhattan area and the area along Manhattan island have the most counts of pickup. Also, what worth noticing is the area at bottom right of the graph. It has an unusual darker red compared with the areas around it, which is the JFK airport area. Apparently, many people (possibly a good portion of them is tourists) opt to take taxi to airport. 
+In first pickup heatmap, the more counts an area have, the darker red that area is. As the graph indicates, Manhattan area and the area along Manhattan island have the most counts of pickup. Also, what worth noticing is the area at bottom right of the graph. It has an unusual darker red compared with the areas around it, which is the JFK airport area. Apparently, many people (possibly a good portion of them is tourists) opt to take taxi to airport. 
 </p>
 <p>
-	Figure 6.2.2 is the drop off heatmap. The darker blue an area is, the more drop off counts that area has. The densest areas for drop off counts are also in Manhattan and the area along it, as well as JFK and LaGuardia airport. This is a surprising result under the assumption that people would take taxi one-way from one location to another. Here, hypothesis could be raised that a portion of the people tends to take taxi more and use taxi as their regular commuting tools, because the similarity of pickup and drop off heatmap indicates there are many a trip happening between certain areas. This hypothesis will not be the focus point for this paper.
+The second graph is drop off heatmap. The darker blue an area is, the more drop off counts that area has. The densest areas for drop off counts are also in Manhattan and the area along it, as well as JFK and LaGuardia airport. This is a surprising result under the assumption that people would take taxi one-way from one location to another. Here, hypothesis could be raised that a portion of the people tends to take taxi more and use taxi as their regular commuting tools, because the similarity of pickup and drop off heatmap indicates there are many a trip happening between certain areas. This hypothesis will not be the focus point for this paper.
 </p>
 </details>
+
+<p align="center">
+	<image src="./graphs/taxi_usage.png.png">
+	<br>
+	<span>Drop-off Heatmap</span>
+</p>
+<details><summary><b>Description for Taxi Use Fluctuation</b></strong></summary>
+<p>
+The graph above shows the usage of taxi data across 2018. Taxi data is split based on time during a day and different colors are used for different time during a day. Period 1 is the time from 6 am to 9 am which is considered as the morning traffic peak hours. Period 2 is the time from 10am to 4pm which is considered as the regular hours during daytime. Period 3 is the time from 5 pm to 8 pm, which is considered as the evening traffic peak. Finally, period 4 is from 9 pm to 5 am which is considered as nighttime. The count number for different time period in a day is mapped against each month to get the graph above. As can be seen, the total taxi usage reached the peak around February, May and October, and the month of March and April have the least taxi records. It is very intriguing to see sudden surge of taxi records from least records in April to most records in May. Also, as can be seen from the graph, the time period in a day at which people tend to use taxi is fixed across the year. People most likely to use the taxi service at Period 2, which is from 10 am to 4 pm at a day. They are least likely to use taxi for period 1 which is 6 am to 9 am at a day, possibly due to the morning traffic.
+</p>
+</details>
+
 </details>
 
 
