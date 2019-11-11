@@ -7,7 +7,8 @@ The aim of this project is to develop a NYC multimodal transportation recommenda
 </p>
 
 
-<details open><summary>Please click on the dropdown to see the full data description<h2 align = "center">Detailed Data Description</h2></summary>
+<details><summary><b>Please click on the dropdown to see the full data description</b></strong></summary>
+ <h2 align = "center">Detailed Data Description</h2>
 <p>
 As discussed above, we mainly made use of four different kinds of data: Taxi Data, Subway Data, Bike Data, and Weather Data. 
 </p>
