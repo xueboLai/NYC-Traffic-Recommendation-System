@@ -121,7 +121,7 @@ The second graph is drop off heatmap. The darker blue an area is, the more drop 
 </details>
 
 <p align="center">
-	<image src="./graphs/taxi_usage.png.png">
+	<image src="./graphs/taxi_usage.png">
 	<br>
 	<span>Drop-off Heatmap</span>
 </p>
