@@ -1,7 +1,9 @@
 <h1 align=center> NYC-Traffic-Recommendation-System</h1>
 
 <h2 align = "center">Overview</h2>
+<p>Keywords: Spark, Python, Data Analysis and Visualization, Tableau, Full-Stack Application</p>
 <p>
+
 The aim of this project is to develop a NYC multimodal transportation recommendation system based on exploring the travelling pattern of citizens taking various public transportation tools in NYC. At the stage of exploring user group’s preference and travelling patterns, multiple datasets such as taxi data, bike data, subway data and weather data are collected. 
  
  During the analytics, Spark and Scala are used to fully understand these data and to find useful insights important for building the recommendation model. For the model, a multi-objective optimization model considering the time and weather is built. In this project, the multi-objective model is transferred into single objective optimization problem using weighted sum method. Floyd-Warshall algorithm is utilized to find the optimal path. Finally, based on the model we built a recommendation system. On the front-end web application built by Python Flask, users can choose the origin and destination location and the website would provide the “best route” (lowest cost route) consisted of different transportation modes to the user.  
@@ -14,7 +16,7 @@ The aim of this project is to develop a NYC multimodal transportation recommenda
 </p>
 
 
-
+<h2 align = "center">Data Analysis</h2>
 
 <details><summary><b>Please click on the dropdown to see the detailed Application Design</b></strong></summary>
 <p>
@@ -96,6 +98,28 @@ Weather data (4.8MB) was downloaded from National Centers For Environmental Info
 
 </details>
 
+<h3 align = "center">Data Analysis using Spark and Tableau</h3>
+<details open><summary><b>Taxi Data Analysis</b></strong></summary>
+<p>The first analysis for Taxi Data was the pickup and drop off location density analytics.</p>
+<p align="center">
+	<image src="./graphs/pickup.png">
+	<br>
+	<span>Pickup Heatmap</span>
+</p>
+<p align="center">
+	<image src="./graphs/dropoff.png">
+	<br>
+	<span>Drop-off Heatmap</span>
+</p>
+<details><summary><b>Description for pick-up and drop-off</b></strong></summary>
+<p>
+In Figure 6.2.1 pickup heatmap, the more counts an area have, the darker red that area is. As the graph indicates, Manhattan area and the area along Manhattan island have the most counts of pickup. Also, what worth noticing is the area at bottom right of the graph. It has an unusual darker red compared with the areas around it, which is the JFK airport area. Apparently, many people (possibly a good portion of them is tourists) opt to take taxi to airport. 
+</p>
+<p>
+	Figure 6.2.2 is the drop off heatmap. The darker blue an area is, the more drop off counts that area has. The densest areas for drop off counts are also in Manhattan and the area along it, as well as JFK and LaGuardia airport. This is a surprising result under the assumption that people would take taxi one-way from one location to another. Here, hypothesis could be raised that a portion of the people tends to take taxi more and use taxi as their regular commuting tools, because the similarity of pickup and drop off heatmap indicates there are many a trip happening between certain areas. This hypothesis will not be the focus point for this paper.
+</p>
+</details>
+</details>
 
 
 
