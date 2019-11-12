@@ -173,7 +173,7 @@ After conducting aggregation of taxi data and weather conditions shown in Figure
 	<br>
 	<span>Figure 6.3.2 Citibike pickup and drop off</span>
 </p>
-<details><summary>Description of Bike Pick-up and Drop-off Graph</strong></summary>
+&nbsp;&nbsp;&nbsp;&nbsp;<details><summary>Description of Bike Pick-up and Drop-off Graph</strong></summary>
 <p>
 Figure 6.3.2 shows the pickup and drop off locations for Citibikes in NYC during 2018. The color deepens with the increase of the usage rate of the site. This figure shows that Citibikes are evenly distributed in NYC, especially in Manhattan. Thus, users can basically reach their destination through Citibike in Manhattan. It can be seen that darker spots are mostly concentrated in Midtown Manhattan. Therefore, in these sites with high demand and utilization rate, citibike can increase the number of bicycles appropriately to better meet the needs of customers.
 </p>
@@ -187,7 +187,7 @@ Figure 6.3.2 shows the pickup and drop off locations for Citibikes in NYC during
 	<br>
 	<span>Figure 6.3.3 Usage counts during four time periods</span>
 </p>
-<details><summary>Description of Citi Bike Usage over 24 hours</strong></summary>
+&nbsp;&nbsp;&nbsp;&nbsp;<details><summary>Description of Citi Bike Usage over 24 hours</strong></summary>
 <p>
 Figure 6.3.3 shows the bike usage counts grouped by four time periods. It is clear that the peak usage of Citibikes appears during May to October. Part of the reason lies in that the weather conditions are mild during this time. </p>
 <p>
@@ -200,7 +200,7 @@ Figure 6.3.3 shows the bike usage counts grouped by four time periods. It is cle
 	<br>
 	<span>Figure 6.3.4 Usage count in different time period</span>
 </p>
-<details><summary>Description of Citi Bike Usage count in different time period </strong></summary>
+&nbsp;&nbsp;&nbsp;&nbsp;<details><summary>Description of Citi Bike Usage count in different time period </strong></summary>
 <p>
 The above figure shows the usage count grouped by four time period on each day. The lines change periodically. The most obvious is the yellow line chart, and basically every peak is on Saturday. For the comparison of the four time periods, the same as above. Less people ride bicycles at night.</p>
 <p>
@@ -214,7 +214,7 @@ The above figure shows the usage count grouped by four time period on each day. 
 	<br>
 	<span>Figure 6.3.5 Information under different weather conditions</span>
 </p>
-<details><summary>Description of Citi Bike in terms of different weather conditions</strong></summary>
+&nbsp;&nbsp;&nbsp;&nbsp;<details><summary>Description of Citi Bike in terms of different weather conditions</strong></summary>
 <p>
 The above figure shows the average distance, average velocity and average price for each single weather. First of all, in the three cases of low temperature, rainfall and strong winds, the average distance is low, probably because people will use other modes of transportation under the bad weather conditions. For the average speed, the average speed is slower when the temperature is higher, and this is a reasonable finding. For the average price, it is positively correlated with riding time. The average price is higher at high temperatures, which means the low riding speed makes price higher. Therefore, it is not a good choice for cycling when the temperature is hot.
 </p>
@@ -225,7 +225,7 @@ The above figure shows the average distance, average velocity and average price 
 	<br>
 	<span>Figure 6.3.5 Information under different weather conditions</span>
 </p>
-<details><summary>Description of single weather conditions influences on CitiBike</strong></summary>
+<details>&nbsp;&nbsp;&nbsp;&nbsp;<summary>Description of single weather conditions influences on CitiBike</strong></summary>
 <p>
 The above analysis of the impact of a single weather factor on Citibike, the following analysis of the impact of the combination of the three weather factors on the speed and duration of cycling. From the chart on the left, we can clearly see that the speed is the slowest in the case of 1-T-T (the weather is cold and rainy and windy, the three characters had the same meaning as the figure in taxi analysis.) Next, the slower weather combination is 3-F-T and 3-F-F. This shows that in high temperature weather, whether it is windy or not, the speed will be slow. From the chart on the right, we can see that under the combination of weather that makes cycling very slow, the duration time are longer.
 </p>
