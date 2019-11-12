@@ -221,7 +221,7 @@ The above figure shows the average distance, average velocity and average price 
 </details>
 	
 <p align="center">
-	<image src="./graphs/singlewea.png">
+	<image src="./graphs/singlewea.png" height="260" width="200">
 	<br>
 	<span>Figure 6.3.5 Information under different weather conditions</span>
 </p>
@@ -231,8 +231,16 @@ The above analysis of the impact of a single weather factor on Citibike, the fol
 </p>
 </details>
 
-	
-	
+<p>
+Conclusion:
+<br>
+From all the analysis of Citibike, we find that both the time period and the weather conditions have significant impact on the usage and speed of Citibike. Thus, we need to know the speed of Citibike under any combination of time and weather. Figure 6.3.7 below shows the result.
+</p>	
+<p align="center">
+	<image src="./graphs/conclusion.png">
+	<br>
+	<span>Figure 6.3.5 Information under different weather conditions</span>
+</p>
 
 
 
