@@ -110,7 +110,7 @@ Weather data (4.8MB) was downloaded from National Centers For Environmental Info
 	<br>
 	<span>Figure 6.2.2 Taxi drop off by taxi zones</span>
 </p>
-<details><summary><b>Description for pick-up and drop-off graphs</b></strong></summary>
+<details><summary>Description for pick-up and drop-off graphs</strong></summary>
 <p>
 In first pickup heatmap, the more counts an area have, the darker red that area is. As the graph indicates, Manhattan area and the area along Manhattan island have the most counts of pickup. Also, what worth noticing is the area at bottom right of the graph. It has an unusual darker red compared with the areas around it, which is the JFK airport area. Apparently, many people (possibly a good portion of them is tourists) opt to take taxi to airport. 
 </p>
@@ -124,7 +124,7 @@ The second graph is drop off heatmap. The darker blue an area is, the more drop 
 	<br>
 	<span>Figure 6.2.3 Usage of taxi </span>
 </p>
-<details><summary><b>Description for Taxi Use Fluctuation</b></strong></summary>
+<details><summary>Description for Taxi Use Fluctuation</strong></summary>
 <p>
 The graph above shows the usage of taxi data across 2018. Taxi data is split based on time during a day and different colors are used for different time during a day. Period 1 is the time from 6 am to 9 am which is considered as the morning traffic peak hours. Period 2 is the time from 10am to 4pm which is considered as the regular hours during daytime. Period 3 is the time from 5 pm to 8 pm, which is considered as the evening traffic peak. Finally, period 4 is from 9 pm to 5 am which is considered as nighttime. The count number for different time period in a day is mapped against each month to get the graph above. As can be seen, the total taxi usage reached the peak around February, May and October, and the month of March and April have the least taxi records. It is very intriguing to see sudden surge of taxi records from least records in April to most records in May. Also, as can be seen from the graph, the time period in a day at which people tend to use taxi is fixed across the year. People most likely to use the taxi service at Period 2, which is from 10 am to 4 pm at a day. They are least likely to use taxi for period 1 which is 6 am to 9 am at a day, possibly due to the morning traffic.
 </p>
@@ -139,7 +139,7 @@ The graph above shows the usage of taxi data across 2018. Taxi data is split bas
 	<span>Figure 6.2.4 Information under different weather conditions</span>
 </p>
 	
-<details><summary><b>Description of Information under different weather conditions</b></strong></summary>
+<details><summary>Description of Information under different weather conditions</strong></summary>
 <p>
 	Figure 6.2.4 upper describes the average travel distance, average traveling velocity and average price mapping against each of the weather conditions. The weather conditions in the graph are divided to 3 dimensions, including temperature, rainfall or snowfall and wind speed. Temperature can be mapped to cold weather (temp1), regular weather (temp2) and hot weather(temp3). Rainfall or snowfall condition can be mapped to raining or snowing(PrepT), no precipitation(PrepF). Wind condition can be divided to strong wind(WindT) and no strong wind(WindF). 
 </p>
@@ -154,7 +154,7 @@ The graph above shows the usage of taxi data across 2018. Taxi data is split bas
 	<span>Figure 6.2.5 Taxi velocity and duration under different weather conditions</span>
 </p>
 	
-<details><summary><b>Description of Taxi velocity and duration under different weather conditions</b></strong></summary>
+<details><summary>Description of Taxi velocity and duration under different weather conditions</strong></summary>
 <p>
 After conducting aggregation of taxi data and weather conditions shown in Figure 6.2.4, we look into the taxi data aggregated by all different weather conditions simultaneously as demonstrated in Figure 6.2.5. The left chart in Figure 6.2.5 denotes the travel velocity and the right chart denotes the average traveling duration. In the Figure 6.2.5, three characters represents the weather conditions: the first character denoting temperatures (1-low, 2-regular, 3-high); the second character means the whether it is raining/snowing; the third character signaling whether it is raining. From the graph above, we can clearly see that when it is cold, raining and windy, the average travel duration reaches the maximum and average travel velocity reaches the minimum. This weather condition causes the most significant difference in taxi traveling data than other weather conditions. What’s more, from the chart, we can easily see that raining and low temperature would cause the taxi to slow down traveling speed significantly. From this analysis, we can conclude that multiple weather factors combined have more predicting power and determinacy than independent weather condition by comparing Figure 6.2.5 to Figure 6.2.4. Despite the need to combine multiple weather conditions to determine taxi traveling data, the low-temperature and raining/snowing weather conditions would worsen taxi traveling duration and speed in general.
 </p>
@@ -173,7 +173,7 @@ After conducting aggregation of taxi data and weather conditions shown in Figure
 	<br>
 	<span>Figure 6.3.2 Citibike pickup and drop off</span>
 </p>
-<details><summary><b>Description of Bike Pick-up and Drop-off Graph</b></strong></summary>
+<details><summary>Description of Bike Pick-up and Drop-off Graph</strong></summary>
 <p>
 Figure 6.3.2 shows the pickup and drop off locations for Citibikes in NYC during 2018. The color deepens with the increase of the usage rate of the site. This figure shows that Citibikes are evenly distributed in NYC, especially in Manhattan. Thus, users can basically reach their destination through Citibike in Manhattan. It can be seen that darker spots are mostly concentrated in Midtown Manhattan. Therefore, in these sites with high demand and utilization rate, citibike can increase the number of bicycles appropriately to better meet the needs of customers.
 </p>
@@ -187,7 +187,7 @@ Figure 6.3.2 shows the pickup and drop off locations for Citibikes in NYC during
 	<br>
 	<span>Figure 6.3.3 Usage counts during four time periods</span>
 </p>
-<details><summary><b>Description of Citi Bike Usage over 24 hours</b></strong></summary>
+<details><summary>Description of Citi Bike Usage over 24 hours</strong></summary>
 <p>
 Figure 6.3.3 shows the bike usage counts grouped by four time periods. It is clear that the peak usage of Citibikes appears during May to October. Part of the reason lies in that the weather conditions are mild during this time. </p>
 <p>
@@ -200,7 +200,7 @@ Figure 6.3.3 shows the bike usage counts grouped by four time periods. It is cle
 	<br>
 	<span>Figure 6.3.4 Usage count in different time period</span>
 </p>
-<details><summary><b>Description of Citi Bike Usage count in different time period </b></strong></summary>
+<details><summary>Description of Citi Bike Usage count in different time period </strong></summary>
 <p>
 The above figure shows the usage count grouped by four time period on each day. The lines change periodically. The most obvious is the yellow line chart, and basically every peak is on Saturday. For the comparison of the four time periods, the same as above. Less people ride bicycles at night.</p>
 <p>
@@ -214,7 +214,7 @@ The above figure shows the usage count grouped by four time period on each day. 
 	<br>
 	<span>Figure 6.3.5 Information under different weather conditions</span>
 </p>
-<details><summary><b>Description of Citi Bike in terms of different weather conditions</b></strong></summary>
+<details><summary>Description of Citi Bike in terms of different weather conditions</strong></summary>
 <p>
 The above figure shows the average distance, average velocity and average price for each single weather. First of all, in the three cases of low temperature, rainfall and strong winds, the average distance is low, probably because people will use other modes of transportation under the bad weather conditions. For the average speed, the average speed is slower when the temperature is higher, and this is a reasonable finding. For the average price, it is positively correlated with riding time. The average price is higher at high temperatures, which means the low riding speed makes price higher. Therefore, it is not a good choice for cycling when the temperature is hot.
 </p>
@@ -225,7 +225,7 @@ The above figure shows the average distance, average velocity and average price 
 	<br>
 	<span>Figure 6.3.5 Information under different weather conditions</span>
 </p>
-<details><summary><b>Description of single weather conditions influences on CitiBike</b></strong></summary>
+<details><summary>Description of single weather conditions influences on CitiBike</strong></summary>
 <p>
 The above analysis of the impact of a single weather factor on Citibike, the following analysis of the impact of the combination of the three weather factors on the speed and duration of cycling. From the chart on the left, we can clearly see that the speed is the slowest in the case of 1-T-T (the weather is cold and rainy and windy, the three characters had the same meaning as the figure in taxi analysis.) Next, the slower weather combination is 3-F-T and 3-F-F. This shows that in high temperature weather, whether it is windy or not, the speed will be slow. From the chart on the right, we can see that under the combination of weather that makes cycling very slow, the duration time are longer.
 </p>
@@ -261,7 +261,19 @@ From all the analysis of Citibike, we find that both the time period and the wea
 
 We are currently in progress of writing the demo and project explanation in README.md. Because this project is very lengthy, it would take us some time to rewrite our findings from paper to Github. For all our findings, please kindly read our paper [NYC_Traffic_Model.pdf](/NYC_Traffic_Model.pdf) which contains all the information about project demonstrations, result visualization and details explanation for now. We really appreciate your patience. 
 
-
+<details><summary><b>Reference</b></strong></summary>
+1.	T. White. Hadoop: The Definitive Guide. O’Reilly Media Inc., Sebastopol, CA, May 2012.
+2.	Liu, Y., & Wei, L. (2018, April). The optimal routes and modes selection in multimodal transportation networks based on improved A∗ algorithm. In 2018 5th International Conference on Industrial Engineering and Applications (ICIEA) (pp. 236-240). IEEE.
+3.	Lele Liu, Jie Liu. Study on Multimodal Transport Route Under Low Carbon Background AIP Conference Proceedings 1971 050001(2018)
+4.	Luo, H., Yang, J., & Nan, X. (2018, October). Path and Transport Mode Selection in Multimodal Transportation with Time Window. In 2018 IEEE 3rd Advanced Information Technology, Electronic and Automation Control Conference (IAEAC) (pp. 162-166). IEEE.
+5.	Wang Haiying,Huang Qiang,Li Chuantao, et al. Graph theory algorithm and its matlab implementation[M].Bei Jing: Beihang University press,2010:28-35.
+6.	Liu, Y., Chen, J., Wu, W., & Ye, J. (2019). Typical Combined Travel Mode Choice Utility Model in Multimodal Transportation Network. Sustainability, 11(2), 549.
+7.	Lucas, K., Phillips, I., Mulley, C., & Ma, L. (2018). Is transport poverty socially or environmentally driven? Comparing the travel behaviours of two low-income populations living in central and peripheral locations in the same city. Transportation Research Part A: Policy and Practice, 116, 622-634.
+8.	SI B F, YANG X B, GAO L, et al. Urban multimodal traffic assignment model based on travel demand[J]. China Journal of Highway & Transport, 2010, 23(6): 85–91. 
+Urban multimodal traffic assignment model based on travel demand. China journal of Highway 
+9.	SI B F, YANG X B, GAO L, et al. Urban multimodal traffic assignment model based on travel demand[J]. China Journal of Highway & Transport, 2010, 23(6): 85–91. 
+10.	Liu, H., Li, T., Hu, R., Fu, Y., Gu, J., & Xiong, H. (2019). Joint Representation Learning for Multi-Modal Transportation Recommendation. AAAI, to appear.
+</details>
 
 
 
