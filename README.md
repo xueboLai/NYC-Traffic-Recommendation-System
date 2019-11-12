@@ -237,9 +237,9 @@ Conclusion:
 From all the analysis of Citibike, we find that both the time period and the weather conditions have significant impact on the usage and speed of Citibike. Thus, we need to know the speed of Citibike under any combination of time and weather. Figure 6.3.7 below shows the result.
 </p>	
 <p align="center">
-	<image src="./graphs/conclusion.png">
+	<image src="./graphs/conclusion.png" height="600" width="280">
 	<br>
-	<span>Figure 6.3.5 Information under different weather conditions</span>
+	<span>Figure 6.3.7 Average speed under each weather condition</span>
 </p>
 
 
