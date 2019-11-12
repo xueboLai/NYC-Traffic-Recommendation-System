@@ -9,7 +9,7 @@ The aim of this project is to develop a NYC multimodal transportation recommenda
 </p>
 
 <p>The Project Design Diagram is shown below, </p>
-<details><summary>Project Designs</strong></summary>
+<details><summary><b>Project Design Diagram</b></strong></summary>
 <p align="center">
 	<image src="./graphs/design.png">
 </p>
