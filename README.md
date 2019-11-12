@@ -149,7 +149,7 @@ The graph above shows the usage of taxi data across 2018. Taxi data is split bas
 </details>
 
 <p align="center">
-	<image src="./graphs/vd_under_wea.png" >
+	<image src="./graphs/vd_under_wea.png" height="350" width="490">
 	<br>
 	<span>Figure 6.2.5 Taxi velocity and duration under different weather conditions</span>
 </p>
