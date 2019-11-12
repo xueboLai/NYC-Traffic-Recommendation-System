@@ -1,6 +1,6 @@
 <h1 align=center> NYC-Traffic-Recommendation-System</h1>
-<p align=center>Authors:
-Xuebo Lai: xl1638@nyu.edu Zhonghui Hu: zh1272@nyu.edu Chen Yang: cy1285@nyu.edu
+<p align=center>
+Xuebo Lai: xl1638@nyu.edu;   Zhonghui Hu: zh1272@nyu.edu;   Chen Yang: cy1285@nyu.edu
 <br>Keywords: Spark, Python, Data Analysis and Visualization, Tableau, Full-Stack Application
 </p>
 
