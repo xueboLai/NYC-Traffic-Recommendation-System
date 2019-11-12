@@ -15,7 +15,7 @@ The aim of this project is to develop a NYC multimodal transportation recommenda
 <p>The Project Design Diagram is shown below, </p>
 <details><summary><b>Project Design Diagram</b></strong></summary>
 <p align="center">
-	<image src="./graphs/design.png">
+	<image src="./graphs/design.png" height="350" width="490">
 </p>
 </details>
 <details><summary><b>Please click on the dropdown to see the detailed Application Design</b></strong></summary>
@@ -103,7 +103,7 @@ Weather data (4.8MB) was downloaded from National Centers For Environmental Info
 </details>
 
 <h3 align = "center">Data Analysis using Spark and Tableau</h3>
-<details open><summary><b>1, Taxi Data Analysis</b></strong></summary>
+<details><summary><b>1, Taxi Data Analysis</b></strong></summary>
 <p align="center">
 	<image src="./graphs/pickup.png">
 	<br>
