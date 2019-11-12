@@ -263,16 +263,16 @@ We are currently in progress of writing the demo and project explanation in READ
 
 <details><summary><b>Reference</b></strong></summary>
 1.	T. White. Hadoop: The Definitive Guide. O’Reilly Media Inc., Sebastopol, CA, May 2012.
-2.	Liu, Y., & Wei, L. (2018, April). The optimal routes and modes selection in multimodal transportation networks based on improved A∗ algorithm. In 2018 5th International Conference on Industrial Engineering and Applications (ICIEA) (pp. 236-240). IEEE.
-3.	Lele Liu, Jie Liu. Study on Multimodal Transport Route Under Low Carbon Background AIP Conference Proceedings 1971 050001(2018)
-4.	Luo, H., Yang, J., & Nan, X. (2018, October). Path and Transport Mode Selection in Multimodal Transportation with Time Window. In 2018 IEEE 3rd Advanced Information Technology, Electronic and Automation Control Conference (IAEAC) (pp. 162-166). IEEE.
-5.	Wang Haiying,Huang Qiang,Li Chuantao, et al. Graph theory algorithm and its matlab implementation[M].Bei Jing: Beihang University press,2010:28-35.
-6.	Liu, Y., Chen, J., Wu, W., & Ye, J. (2019). Typical Combined Travel Mode Choice Utility Model in Multimodal Transportation Network. Sustainability, 11(2), 549.
-7.	Lucas, K., Phillips, I., Mulley, C., & Ma, L. (2018). Is transport poverty socially or environmentally driven? Comparing the travel behaviours of two low-income populations living in central and peripheral locations in the same city. Transportation Research Part A: Policy and Practice, 116, 622-634.
-8.	SI B F, YANG X B, GAO L, et al. Urban multimodal traffic assignment model based on travel demand[J]. China Journal of Highway & Transport, 2010, 23(6): 85–91. 
+<br>2.	Liu, Y., & Wei, L. (2018, April). The optimal routes and modes selection in multimodal transportation networks based on improved A∗ algorithm. In 2018 5th International Conference on Industrial Engineering and Applications (ICIEA) (pp. 236-240). IEEE.
+<br>3.	Lele Liu, Jie Liu. Study on Multimodal Transport Route Under Low Carbon Background AIP Conference Proceedings 1971 050001(2018)
+<br>4.	Luo, H., Yang, J., & Nan, X. (2018, October). Path and Transport Mode Selection in Multimodal Transportation with Time Window. In 2018 IEEE 3rd Advanced Information Technology, Electronic and Automation Control Conference (IAEAC) (pp. 162-166). IEEE.
+<br>5.	Wang Haiying,Huang Qiang,Li Chuantao, et al. Graph theory algorithm and its matlab implementation[M].Bei Jing: Beihang University press,2010:28-35.
+<br>6.	Liu, Y., Chen, J., Wu, W., & Ye, J. (2019). Typical Combined Travel Mode Choice Utility Model in Multimodal Transportation Network. Sustainability, 11(2), 549.
+<br>7.	Lucas, K., Phillips, I., Mulley, C., & Ma, L. (2018). Is transport poverty socially or environmentally driven? Comparing the travel behaviours of two low-income populations living in central and peripheral locations in the same city. Transportation Research Part A: Policy and Practice, 116, 622-634.
+<br>8.	SI B F, YANG X B, GAO L, et al. Urban multimodal traffic assignment model based on travel demand[J]. China Journal of Highway & Transport, 2010, 23(6): 85–91. 
 Urban multimodal traffic assignment model based on travel demand. China journal of Highway 
-9.	SI B F, YANG X B, GAO L, et al. Urban multimodal traffic assignment model based on travel demand[J]. China Journal of Highway & Transport, 2010, 23(6): 85–91. 
-10.	Liu, H., Li, T., Hu, R., Fu, Y., Gu, J., & Xiong, H. (2019). Joint Representation Learning for Multi-Modal Transportation Recommendation. AAAI, to appear.
+<br>9.	SI B F, YANG X B, GAO L, et al. Urban multimodal traffic assignment model based on travel demand[J]. China Journal of Highway & Transport, 2010, 23(6): 85–91. 
+<br>10.	Liu, H., Li, T., Hu, R., Fu, Y., Gu, J., & Xiong, H. (2019). Joint Representation Learning for Multi-Modal Transportation Recommendation. AAAI, to appear.
 </details>
 
 
