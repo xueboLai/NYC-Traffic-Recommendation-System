@@ -99,7 +99,6 @@ Weather data (4.8MB) was downloaded from National Centers For Environmental Info
 
 <h3 align = "center">Data Analysis using Spark and Tableau</h3>
 <details open><summary><b>1, Taxi Data Analysis</b></strong></summary>
-<p>The first analysis for Taxi Data was the pickup and drop off location density analytics.</p>
 <p align="center">
 	<image src="./graphs/pickup.png">
 	<br>
