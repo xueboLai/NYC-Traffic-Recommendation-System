@@ -103,12 +103,12 @@ Weather data (4.8MB) was downloaded from National Centers For Environmental Info
 <p align="center">
 	<image src="./graphs/pickup.png">
 	<br>
-	<span>Pickup Heatmap</span>
+	<span>Figure 6.2.1 Taxi pickup by taxi zones</span>
 </p>
 <p align="center">
 	<image src="./graphs/dropoff.png">
 	<br>
-	<span>Drop-off Heatmap</span>
+	<span>Figure 6.2.2 Taxi drop off by taxi zones</span>
 </p>
 <details><summary><b>Description for pick-up and drop-off graphs</b></strong></summary>
 <p>
@@ -122,13 +122,31 @@ The second graph is drop off heatmap. The darker blue an area is, the more drop 
 <p align="center">
 	<image src="./graphs/taxi_usage.png">
 	<br>
-	<span>Drop-off Heatmap</span>
+	<span>Figure 6.2.3 Usage of taxi </span>
 </p>
 <details><summary><b>Description for Taxi Use Fluctuation</b></strong></summary>
 <p>
 The graph above shows the usage of taxi data across 2018. Taxi data is split based on time during a day and different colors are used for different time during a day. Period 1 is the time from 6 am to 9 am which is considered as the morning traffic peak hours. Period 2 is the time from 10am to 4pm which is considered as the regular hours during daytime. Period 3 is the time from 5 pm to 8 pm, which is considered as the evening traffic peak. Finally, period 4 is from 9 pm to 5 am which is considered as nighttime. The count number for different time period in a day is mapped against each month to get the graph above. As can be seen, the total taxi usage reached the peak around February, May and October, and the month of March and April have the least taxi records. It is very intriguing to see sudden surge of taxi records from least records in April to most records in May. Also, as can be seen from the graph, the time period in a day at which people tend to use taxi is fixed across the year. People most likely to use the taxi service at Period 2, which is from 10 am to 4 pm at a day. They are least likely to use taxi for period 1 which is 6 am to 9 am at a day, possibly due to the morning traffic.
 </p>
+<p align="center">
+	<image src="./graphs/info_under_wea.png">
+	<br>
+	<span>Figure 6.2.4 Information under different weather conditions</span>
+</p>
+	
+<details><summary><b>Description of Information under different weather conditions</b></strong></summary>
+<p>
+	Figure 6.2.4 upper describes the average travel distance, average traveling velocity and average price mapping against each of the weather conditions. The weather conditions in the graph are divided to 3 dimensions, including temperature, rainfall or snowfall and wind speed. Temperature can be mapped to cold weather (temp1), regular weather (temp2) and hot weather(temp3). Rainfall or snowfall condition can be mapped to raining or snowing(PrepT), no precipitation(PrepF). Wind condition can be divided to strong wind(WindT) and no strong wind(WindF). 
+</p>
+<p>
+	Although not very obvious, it can be seen that taxi’s speed is slowest during the time when there is precipitation, and the price reaches the peak during precipitation, which fits into empirical experience since the traffic is usually not good during raining or snowing. From the graph, we can also see that the temperature and whether it is windy independently would barely affect the taxi traveling velocity and prices too much.
+</p>
+<details><summary><b>Description for Taxi Use Fluctuation</b></strong></summary>
+
 </details>
+
+
+
 
 </details>
 
