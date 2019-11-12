@@ -120,7 +120,7 @@ The second graph is drop off heatmap. The darker blue an area is, the more drop 
 </details>
 
 <p align="center">
-	<image src="./graphs/taxi_usage.png">
+	<image src="./graphs/taxi_usage.png" height="350" width="490">
 	<br>
 	<span>Figure 6.2.3 Usage of taxi </span>
 </p>
@@ -134,7 +134,7 @@ The graph above shows the usage of taxi data across 2018. Taxi data is split bas
 
 
 <p align="center">
-	<image src="./graphs/info_under_wea.png">
+	<image src="./graphs/info_under_wea.png" height="350" width="490">
 	<br>
 	<span>Figure 6.2.4 Information under different weather conditions</span>
 </p>
@@ -149,7 +149,7 @@ The graph above shows the usage of taxi data across 2018. Taxi data is split bas
 </details>
 
 <p align="center">
-	<image src="./graphs/vd_under_wea.png">
+	<image src="./graphs/vd_under_wea.png" height="350" width="490">
 	<br>
 	<span>Figure 6.2.5 Taxi velocity and duration under different weather conditions</span>
 </p>
@@ -168,8 +168,8 @@ After conducting aggregation of taxi data and weather conditions shown in Figure
 <details><summary><b>2, Bike Data Analysis</b></strong></summary>
 
 <p align="center">
-	<image src="./graphs/bikepickup.png">
-	<image src="./graphs/bikedropoff.png">
+	<image src="./graphs/bikepickup.png" height="350" width="490">
+	<image src="./graphs/bikedropoff.png" height="350" width="490">
 	<br>
 	<span>Figure 6.3.2 Citibike pickup and drop off</span>
 </p>
@@ -183,7 +183,7 @@ Figure 6.3.2 shows the pickup and drop off locations for Citibikes in NYC during
 
 
 <p align="center">
-	<image src="./graphs/usageperiod.png">
+	<image src="./graphs/usageperiod.png" height="350" width="490">
 	<br>
 	<span>Figure 6.3.3 Usage counts during four time periods</span>
 </p>
@@ -196,7 +196,7 @@ Figure 6.3.3 shows the bike usage counts grouped by four time periods. It is cle
 </details>
 
 <p align="center">
-	<image src="./graphs/usagecount.png">
+	<image src="./graphs/usagecount.png" height="350" width="490">
 	<br>
 	<span>Figure 6.3.4 Usage count in different time period</span>
 </p>
@@ -210,7 +210,7 @@ The above figure shows the usage count grouped by four time period on each day. 
 	
 
 <p align="center">
-	<image src="./graphs/infounderweac.png">
+	<image src="./graphs/infounderweac.png" height="350" width="490">
 	<br>
 	<span>Figure 6.3.5 Information under different weather conditions</span>
 </p>
@@ -221,7 +221,7 @@ The above figure shows the average distance, average velocity and average price 
 </details>
 	
 <p align="center">
-	<image src="./graphs/singlewea.png">
+	<image src="./graphs/singlewea.png" height="350" width="490">
 	<br>
 	<span>Figure 6.3.5 Information under different weather conditions</span>
 </p>
@@ -231,8 +231,16 @@ The above analysis of the impact of a single weather factor on Citibike, the fol
 </p>
 </details>
 
-	
-	
+<p>
+Conclusion:
+<br>
+From all the analysis of Citibike, we find that both the time period and the weather conditions have significant impact on the usage and speed of Citibike. Thus, we need to know the speed of Citibike under any combination of time and weather. Figure 6.3.7 below shows the result.
+</p>	
+<p align="center">
+	<image src="./graphs/conclusion.png">
+	<br>
+	<span>Figure 6.3.5 Information under different weather conditions</span>
+</p>
 
 
 
