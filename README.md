@@ -9,10 +9,11 @@ The aim of this project is to develop a NYC multimodal transportation recommenda
 </p>
 
 <p>The Project Design Diagram is shown below, </p>
-
+<details><summary>Project Designs</strong></summary>
 <p align="center">
 	<image src="./graphs/design.png">
 </p>
+</details>
 <details><summary><b>Please click on the dropdown to see the detailed Application Design</b></strong></summary>
 <p>
 	At the first stage of the project, data including taxi, subway, citibike and weather from different sources is collected and stored in Hadoop HDFS. In Spark, the travelling patterns of taxi, subway and citibikes are analyzed under different weather conditions and time periods. Average velocity and cost of each transportation mode under different weather conditions and time period are generated. With the result of analysis, a multimodal transportation recommendation model minimizing both duration and cost is built and Floyd-Warshall algorithm is utilized to find the optimal path.
