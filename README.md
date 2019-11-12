@@ -37,7 +37,7 @@ With the data layer constructed as described above, we have the options to build
 
 
 
-
+<h3 align = "center">Data Source and Data Format Explanation</h2>
 <details><summary><b>Please click on the dropdown to see the raw data description</b></strong></summary>
  <h2 align = "center">Detailed Data Description</h2>
 <p>
