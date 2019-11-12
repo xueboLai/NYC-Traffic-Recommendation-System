@@ -128,6 +128,11 @@ The second graph is drop off heatmap. The darker blue an area is, the more drop 
 <p>
 The graph above shows the usage of taxi data across 2018. Taxi data is split based on time during a day and different colors are used for different time during a day. Period 1 is the time from 6 am to 9 am which is considered as the morning traffic peak hours. Period 2 is the time from 10am to 4pm which is considered as the regular hours during daytime. Period 3 is the time from 5 pm to 8 pm, which is considered as the evening traffic peak. Finally, period 4 is from 9 pm to 5 am which is considered as nighttime. The count number for different time period in a day is mapped against each month to get the graph above. As can be seen, the total taxi usage reached the peak around February, May and October, and the month of March and April have the least taxi records. It is very intriguing to see sudden surge of taxi records from least records in April to most records in May. Also, as can be seen from the graph, the time period in a day at which people tend to use taxi is fixed across the year. People most likely to use the taxi service at Period 2, which is from 10 am to 4 pm at a day. They are least likely to use taxi for period 1 which is 6 am to 9 am at a day, possibly due to the morning traffic.
 </p>
+
+
+</details>
+
+
 <p align="center">
 	<image src="./graphs/info_under_wea.png">
 	<br>
@@ -141,14 +146,8 @@ The graph above shows the usage of taxi data across 2018. Taxi data is split bas
 <p>
 	Although not very obvious, it can be seen that taxi’s speed is slowest during the time when there is precipitation, and the price reaches the peak during precipitation, which fits into empirical experience since the traffic is usually not good during raining or snowing. From the graph, we can also see that the temperature and whether it is windy independently would barely affect the taxi traveling velocity and prices too much.
 </p>
-<details><summary><b>Description for Taxi Use Fluctuation</b></strong></summary>
-
 </details>
 
-
-
-
-</details>
 
 
 <br>
